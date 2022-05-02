@@ -1,5 +1,6 @@
-const { Category } = require('../models');
+const { Category } = require('../models/Category');
 const sequelize = require('../config/connection');
+const product = require('../models/Product')
 
 const categoryData = [
   {

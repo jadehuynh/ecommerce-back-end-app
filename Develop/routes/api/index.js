@@ -9,10 +9,10 @@ router.use('/products', productRoutes);
 router.use('/tags', tagRoutes);
 
 router.get('/', (req,res) => {
-    res.send("hello")
+    res.send("Welcome to the Ecommerce App")
   })
 
 router.get('*', (req,res) => {
-    res.send("yoyoyo")
+    res.send("Welcome to the Ecommerce App")
   })
 module.exports = router;
