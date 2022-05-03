@@ -20,23 +20,50 @@ router.get('/:id', async (req, res) => {
   try{
     const oneCat = await Category.findByPk({include : [{ model : Product }]});
     
-    res.status(200).json(allCat)
+    res.status(200).json(oneCat)
   } catch (err) {
     res.status(500).json(err);
   }
 });
+ // create a new category
+router.post('/', async (req, res) => {
+  try {
+    const createCat = await Category.create({
 
-router.post('/', (req, res) => {
-  // create a new category
+      category_name: req.body.category_name
+    })
+    res.status(200).json(createCat)
+  }catch (err) {
+    res.status(500).json(err);
+  }
 });
-
+ // update a category by its `id` value
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
+  try {
+    const catData = await Category.update(req.body,{
+      where: {
+        id: req.params.id,
+      },
+    })
+    res.status(200).json(catData)
+  }catch (err) {
+  res.status(400).json(err)
+  ;}
+});
+ // delete a category by its `id` value
+router.delete('/:id', (req, res) => {
+  try {
+    const deleteData = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+    res.status(200).json(deleteData)
+}catch (err) {
+  res.status(400).json(err)
+  ;}
 });
 
-router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
-});
 router.get('*', (req,res) => {
   res.send("Welcome to the Ecommerce App")
 })
