@@ -1,5 +1,5 @@
 const { Product } = require('../models');
-const sequelize = require('../config/connection');
+// const sequelize = require('../config/connection');
 
 const productData = [
   {
