@@ -38,7 +38,7 @@ router.get('/:id', async (req, res) => {
 router.post('/', (req, res) => {
   Product.create(req.body)
       .then((product) => {
-        if (req.tagId.length) {
+        if (req.body.tagId.length) {
           const prodTagArr = req.body.tagId.map((tag_id) => {
             return {
               product_id: product.id,
@@ -92,7 +92,7 @@ router.put('/:id', (req, res) => {
         ProductTag.bulkCreate(newProdTag),
       ]);
     })
-    .then((updateProdTag) => res.json(updateProdTag))
+    .then((updateProdTag) => res.json("Updated"))
     .catch((err) => {
       // console.log(err);
       res.status(400).json(err);
