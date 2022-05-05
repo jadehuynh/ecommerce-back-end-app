@@ -52,11 +52,9 @@ router.put('/:id', async (req, res) => {
         id : req.params.id
       }
     });
-
     if (!updateTag[0]) {
       res.status(404).json({ message : `No data found for ID in database.`})
     }
-    
     res.status(200).json(updateTag)
   } catch (error) {
     res.status(500).json(error);
@@ -75,9 +73,7 @@ router.delete('/:id', async (req, res) => {
       res.status(404).json({ message : `No data found for ID in database to remove.`}); 
       return;
     }
-
     res.status(200).json({ message :  `Deleted ${deleteTag} from tag` })
-
   } catch (error) {
     res.status(500).json(error)
   }
