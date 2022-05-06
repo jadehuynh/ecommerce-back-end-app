@@ -13,4 +13,14 @@
 
 ---
 
+# Images of Ecommerce Application
+----
+![Initial Code of Routes](/Assets/ecom_code.png)
+
+----
+![Deployments in Insomina](/Assets/ecom_1.png)
+
+----
+![](/Assets/ecom_2.png)
+
 
