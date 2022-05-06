@@ -20,7 +20,7 @@
 [GitHub Link to Repository](https://github.com/jadehuynh/ecommerce-back-end-app)
 
 ----
-[Link to Live Video Walkthrough]()
+[Link to Live Video Walkthrough](https://youtu.be/ho-qCbQ2qq0)
 
 ---
 
